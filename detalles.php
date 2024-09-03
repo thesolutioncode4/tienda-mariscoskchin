@@ -116,12 +116,12 @@ else {
 
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselImages"
-                            data-bs-slide="prev" style="z-index: 0;">
+                            data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#carouselImages"
-                            data-bs-slide="next" style="z-index: 0;">
+                            data-bs-slide="next">
                             <span class="carousel-control-next-icon " aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
@@ -130,19 +130,18 @@ else {
                 <div class="col-md-6 order-md-2">
                     <h2><?php echo $nombre; ?></h2>
                     <?php if($descuento > 0) {?>
-                    <p><del><?php echo moneda . number_format($precio, 2, '.', ',');?></del> </p>
-                    <h2><?php echo moneda . number_format($precio_desc, 2, '.', ',');?> <small class="text-success">
-                            <?php echo $descuento; ?>% de descuento</small></h2>
-
+                    <h2><?php echo moneda . number_format($precio_desc, 2, '.', ',');?>  <small class="text-success">  <?php echo $descuento; ?>% de descuento</small></h2>
+                    <p><del><?php echo moneda . number_format($precio, 2, '.', ',');?></del>  </p>
+                    
                     <?php } else { ?>
                     <h2><?php echo moneda . number_format($precio, 2, '.', ',');?></h2>
                     <?php } ?>
                     <p></p>
                     <p class="lead"><b>Descripcion</b></p>
                     <p class="lead"><?php echo $descripcion;?></p>
-                    <div class="col-4 my-3" >
-                        Cantidad: <input class="form-control" id="cantidad" name="cantidad" type="number" min="1" placeholder="Minimo 1 K/g"
-                            >
+                    <div class="col-3 my-3">
+                        Cantidad: <input class="form-control" id="cantidad" name="cantidad" type="number" min="1"
+                            value="1">
                     </div>
                     <div class="d-grid gap-3 col-10 mx-auto">
                         <button class="btn btn-outline-primary" type="button"
